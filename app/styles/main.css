@@ -1,0 +1,888 @@
+/* Will be compiled down to a single stylesheet with your sass files */
+/* Designed and built by Hyacinthe in SF, CA */
+
+/* ***PAGE***  
+ * setting up the lighting for the whole stage */
+
+@font-face { 
+    font-family: 'Homizio Thin'; 
+    src: url('../font/homizio_thin.otf'); 
+} 
+
+
+@font-face { 
+    font-family: 'Homizio Light'; 
+    src: url('../font/homizio_light.otf'); 
+} 
+
+@font-face { 
+    font-family: 'Homizio Regular'; 
+    src: url('../font/homizio_regular.otf'); 
+} 
+
+@font-face { 
+    font-family: 'Homizio Bold'; 
+    src: url('../font/homizio_bold.otf'); 
+} 
+
+@font-face { 
+    font-family: 'Homizio Black'; 
+    src: url('../font/homizio_black.otf'); 
+} 
+
+@font-face { 
+    font-family: 'Helvetica Neue'; 
+    src: url('../font/helveticaneues.otf'); 
+} 
+
+body {
+    background: #f7f8fc;
+    background-image: none;
+}
+
+/* ***SPECIFICS***  
+ * because you've to be specific */
+
+h1 {
+    font-family: 'Homizio Thin';
+    font-size: 1.2em;
+    color: #c5c6c8;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Homizio Thin';
+    font-size: 2.1em;
+    color: #34393d;
+}
+
+h3 {
+    text-align: center;
+    top: 690px;
+    font-family: 'Homizio Thin';
+    font-size: 0.8em;
+    color: #c5c6c8;
+}
+
+#container {
+    display: inline-block;
+    position: absolute;
+    width: 1000px;
+    left: 50%;
+    margin-left: -500px;
+}
+
+#up {
+    margin-top: 23px;
+}
+
+#title {
+    display: block;
+    margin: 0 auto;
+}
+
+#window {
+    display: inline-block;
+    position: absolute;
+    width: 1000px;
+    height: 500px;
+    overflow: hidden;
+}
+
+#gallery {
+    padding: 0;
+    margin-top: 0;
+    position: absolute;
+    width: 12000px;  /* Find a technique not to put a fix px size, auto doesn't seem to work */
+    height: 100%;
+    left: 50%;
+    z-index: 0;
+}
+
+
+#gallery {
+    -moz-transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .55s ease-in-out;
+    margin-left: -250px;
+}
+
+#down {
+    position: absolute;
+    top: 700px;
+    width: 1000px;
+}
+
+
+a {display: inline-block; height: 29px; text-decoration: none}
+a:link {color:#8c8e8f;}      
+a:visited {color: #8c8e8f;}  
+a:hover {color:#4157f2;}  
+a:active {color:#8c8e8f;} 
+
+/* TABLEAUX */
+
+.tableau {
+    display: inline-block;
+    position: relative;
+    height: 500px;
+    width: 500px;
+    margin-right: 125px;
+    z-index: -2;
+}
+
+.css {
+    opacity: 1;
+    width: 500px;   /*repeating size of tableau to make % work with sub divs not supposed to be necessary*/
+    height: 500px;  /*repeating size of tableau to make % work with sub divs not supposed to be necessary*/
+}
+
+.ref {
+    opacity: 0;
+}
+
+/* Max Bill, Rotation Around Expanding White, 1981 */
+
+#bck-bill {
+    position: absolute;
+    top: 81px;
+    left: 78px;
+    height: 341px;
+    width: 342px;
+    background-color: ffffff;
+    -webkit-transform: rotate(46.3deg);
+    -moz-transform: rotate(-46.3deg);
+    rotation: -46.3deg;
+    z-index: 0;
+}
+
+#body-nanosquare-bill {
+    position: absolute;
+    top: 239px;
+    left: 121px;
+    height: 17px;
+    width: 17px;
+    background-color: #fff;
+    -webkit-transform: rotate(46.3deg);
+    -moz-transform: rotate(46.3deg);
+    rotation: 46.3deg;
+    z-index: 1;
+}
+
+#orange-nanosquare-bill  {
+    position: absolute;
+    left: 118px;
+    top: 236px;
+    width: 0px;
+    border-top: 12px solid transparent;
+    border-left: 12px solid #e75012;
+    -webkit-transform: rotate(89deg);
+    -moz-transform: rotate(89deg);
+    rotation: -89deg;
+    z-index: 3;
+}
+
+#pink-nanosquare-bill    {
+    position: absolute;
+    left: 130px;
+    top: 236px;
+    width: 0px;
+    border-top: 12px solid transparent;
+    border-left: 12px solid #b35ca2;
+    -webkit-transform: rotate(179deg);
+    -moz-transform: rotate(179deg);
+    rotation: 179deg;
+    z-index: 3;
+}
+
+#blue-nanosquare-bill    {
+    position: absolute;
+    left: 130px;
+    top: 248px;
+    width: 0px;
+    border-top: 12px solid transparent;
+    border-left: 12px solid #0193cc;
+    -webkit-transform: rotate(-91deg);
+    -moz-transform: rotate(-91deg);
+    rotation: -91deg;
+    z-index: 3;
+}
+
+#green-nanosquare-bill   {
+    position: absolute;
+    left: 118px;
+    top: 248px;
+    width: 0px;
+    border-top: 12px solid transparent;
+    border-left: 12px solid #44ab2f;
+    -webkit-transform: rotate(-1deg);
+    -moz-transform: rotate(-101deg);
+    rotation: -101deg;
+    z-index: 3;
+}
+
+#body-minisquare-bill {
+    position: absolute;
+    top: 112px;
+    left: 237px;
+    height: 35px;
+    width: 35px;
+    background-color: #fff;
+    -webkit-transform: rotate(46.3deg);
+    -moz-transform: rotate(46.3deg);
+    rotation: 46.3deg;
+    z-index: 1;
+}
+
+#blue-minisquare-bill    {
+    position: absolute;
+    left: 233px;
+    top: 101px;
+    width: 0px;
+    border-top: 31px solid transparent;
+    border-left: 19px solid #0193cc;
+    -webkit-transform: rotate(79deg);
+    -moz-transform: rotate(79deg);
+    rotation: -79deg;
+    z-index: 3;
+}
+
+#green-minisquare-bill   {
+    position: absolute;
+    left: 257px;
+    top: 103px;
+    width: 0px;
+    border-top: 31px solid transparent;
+    border-left: 19px solid #44ab2f;
+    -webkit-transform: rotate(169deg);
+    -moz-transform: rotate(169deg);
+    rotation: 169deg;
+    z-index: 3;
+}
+
+#pink-minisquare-bill    {
+    position: absolute;
+    left: 231px;
+    top: 125px;
+    width: 0px;
+    border-top: 31px solid transparent;
+    border-left: 19px solid #b35ca2;
+    -webkit-transform: rotate(-11deg);
+    -moz-transform: rotate(-11deg);
+    rotation: -11deg;
+    z-index: 3;
+}
+
+#orange-minisquare-bill  {
+    position: absolute;
+    left: 255px;
+    top: 127px;
+    width: 0px;
+    border-top: 31px solid transparent;
+    border-left: 19px solid #e75012;
+    -webkit-transform: rotate(-101deg);
+    -moz-transform: rotate(--101deg);
+    rotation: --101deg;
+    z-index: 3;
+}
+
+#body-midsquare-bill {
+    position: absolute;
+    top: 219px;
+    left: 337px;
+    height: 69px;
+    width: 69px;
+    background-color: #fff;
+    -webkit-transform: rotate(46.3deg);
+    -moz-transform: rotate(46.3deg);
+    rotation: 46.3deg;
+    z-index: 1;
+}
+
+#orange-midsquare-bill   {
+    position: absolute;
+    left: 335px;
+    top: 197px;
+    width: 0px;
+    border-top: 63px solid transparent;
+    border-left: 26px solid #e75012;
+    -webkit-transform: rotate(69deg);
+    -moz-transform: rotate(-69deg);
+    rotation: -693deg;
+    z-index: 3;
+}
+
+#pink-midsquare-bill     {
+    position: absolute;
+    left: 383px;
+    top: 199px;
+    width: 0px;
+    border-top: 63px solid transparent;
+    border-left: 26px solid #b35ca2;
+    -webkit-transform: rotate(159deg);
+    -moz-transform: rotate(-159deg);
+    rotation: -159deg;
+    z-index: 3;
+}
+
+#green-midsquare-bill    {
+position: absolute;
+left: 333px;
+top: 244px;
+width: 0px;
+border-top: 63px solid transparent;
+border-left: 26px solid #44ab2f;
+-webkit-transform: rotate(-21deg);
+-moz-transform: rotate(-21deg);
+rotation: -21deg;
+z-index: 3
+}
+
+#blue-midsquare-bill     {
+position: absolute;
+left: 381px;
+top: 246px;
+width: 0px;
+border-top: 63px solid transparent;
+border-left: 26px solid #0193cc;
+-webkit-transform: rotate(-111deg);
+-moz-transform: rotate(-111deg);
+rotation: -111deg;
+z-index: 3;
+}
+
+#body-maxisquare-bill {
+position: absolute;
+top: 302px;
+left: 180px;
+height: 139px;
+width: 138px;
+background-color: #fff;
+-webkit-transform: rotate(47deg);
+-moz-transform: rotate(-46.3deg);
+rotation: -46.3deg;
+z-index: 1;
+}
+
+#blue-maxisquare-bill    {
+position: absolute;
+left: 193px;
+top: 252px;
+width: 0px;
+border-top: 137px solid transparent;
+border-left: 15px solid #0193cc;
+-webkit-transform: rotate(53deg);
+-moz-transform: rotate(53deg);
+rotation: 53deg;
+z-index: 3;
+}
+
+#green-maxisquare-bill   {
+position: absolute;
+left: 289px;
+top: 256px;
+width: 0px;
+border-top: 137px solid transparent;
+border-left: 15px solid #44ab2f;
+-webkit-transform: rotate(143deg);
+-moz-transform: rotate(143deg);
+rotation: 143deg;
+z-index: 3;
+}
+
+#orange-maxisquare-bill  {
+position: absolute;
+left: 286px;
+top: 353px;
+width: 0px;
+border-top: 137px solid transparent;
+border-left: 15px solid #e75012;
+-webkit-transform: rotate(-127deg);
+-moz-transform: rotate(-127deg);
+rotation: -127deg;
+z-index: 3;
+}
+
+#pink-maxisquare-bill    {
+position: absolute;
+left: 192px;
+top: 348px;
+width: 0px;
+border-top: 137px solid transparent;
+border-left: 15px solid #b35ca2;
+-webkit-transform: rotate(-37deg);
+-moz-transform: rotate(-37deg);
+rotation: -37deg;
+z-index: 3;
+}
+
+#red-leftcorner-bill {
+position: absolute;
+left: 16px;
+top: 117px;
+width: 0px;
+border-top: 134px solid transparent;
+border-left: 111px solid #e2000e;
+-webkit-transform: rotate(-94deg);
+-moz-transform: rotate(-37deg);
+rotation: -37deg;
+z-index: 3;
+}
+
+#orange-leftcorner-bill {
+position: absolute;
+left: 12px;
+top: 241px;
+width: 0px;
+border-top: 132px solid transparent;
+border-left: 109px solid #f8a700;
+-webkit-transform: rotate(176deg);
+-moz-transform: rotate(176deg);
+rotation: 176deg;
+z-index: 3;
+}
+
+#one-blue-leftcorner-bill {
+position: absolute;
+left: 144px;
+top: 116px;
+width: 0px;
+border-top: 145px solid transparent;
+border-left: 94px solid #0e51a0;
+-webkit-transform: rotate(171deg);
+-moz-transform: rotate(170deg);
+rotation: 170deg;
+z-index: 4;
+}
+
+#two-blue-leftcorner-bill {
+position: absolute;
+left: 140px;
+top: 121px;
+width: 0px;
+border-top: 133px solid transparent;
+border-left: 107px solid #0e51a0;
+-webkit-transform: rotate(357deg);
+-moz-transform: rotate(170deg);
+rotation: 170deg;
+z-index: 4;
+}
+
+#one-green-leftcorner-bill {
+position: absolute;
+left: 132px;
+top: 246px;
+height: 0;
+border-top: 130px solid transparent;
+border-left: 112px solid #00834f;
+-webkit-transform: rotate(86deg);
+-moz-transform: rotate(-4deg);
+rotation: 170deg;
+z-index: 4;
+}
+
+#two-green-leftcorner-bill {
+position: absolute;
+left: 177px;
+top: 222px;
+height: 0;
+border-top: 173px solid transparent;
+border-left: 20px solid #00834f;
+-webkit-transform: rotate(232deg);
+-moz-transform: rotate(-4deg);
+rotation: 170deg;
+z-index: 4;
+}
+
+#green-topcorner-bill {
+position: absolute;
+left: 149px;
+top: -2px;
+width: 1px;
+border-top: 140px solid transparent;
+border-left: 90px solid #00834f;
+-webkit-transform: rotate(-100deg);
+-moz-transform: rotate(-37deg);
+rotation: -37deg;
+z-index: 3;
+}
+
+#orange-topcorner-bill {
+position: absolute;
+left: 268px;
+top: 3px;
+width: 0px;
+border-top: 139px solid transparent;
+border-left: 92px solid #f8a700;
+-webkit-transform: rotate(-10deg);
+-moz-transform: rotate(176deg);
+rotation: 176deg;
+z-index: 3;
+}
+
+#one-red-topcorner-bill {
+position: absolute;
+left: 264px;
+top: 123px;
+height: 0;
+border-top: 140px solid transparent;
+border-left: 95px solid #e2000e;
+-webkit-transform: rotate(80deg);
+-moz-transform: rotate(-4deg);
+rotation: 170deg;
+z-index: 4;
+}
+
+#two-red-topcorner-bill {
+position: absolute;
+left: 275px;
+top: 113px;
+height: 0;
+border-top: 156px solid transparent;
+border-left: 68px solid #e2000e;
+-webkit-transform: rotate(250deg);
+-moz-transform: rotate(-4deg);
+rotation: 170deg;
+z-index: 4;
+}
+
+#blue-rightcorner-bill {
+position: absolute;
+left: 397px;
+top: 116px;
+width: 0px;
+border-top: 159px solid transparent;
+border-left: 69px solid #0e51a0;
+-webkit-transform: rotate(-20deg);
+-moz-transform: rotate(176deg);
+rotation: 176deg;
+z-index: 3;
+}
+
+#green-rightcorner-bill {
+position: absolute;
+left: 395px;
+top: 239px;
+width: 0px;
+border-top: 156px solid transparent;
+border-left: 69px solid #00834f;
+-webkit-transform: rotate(70deg);
+-moz-transform: rotate(176deg);
+rotation: 176deg;
+z-index: 3;
+}
+
+#one-orange-rightcorner-bill {
+position: absolute;
+left: 270px;
+top: 235px;
+height: 0;
+border-top: 154px solid transparent;
+border-left: 73px solid #f8a700;
+-webkit-transform: rotate(161deg);
+-moz-transform: rotate(-4deg);
+rotation: 170deg;
+z-index: 4;
+}
+
+#two-orange-rightcorner-bill {
+position: absolute;
+left: 303px;
+top: 234px;
+height: 0;
+border-top: 160px solid transparent;
+border-left: 20px solid #f8a700;
+-webkit-transform: rotate(323deg);
+-moz-transform: rotate(-4deg);
+rotation: 170deg;
+z-index: 4;
+}
+
+#blue-lowcorner-bill {
+position: absolute;
+left: 175px;
+top: 344px;
+height: 0;
+border-top: 170px solid transparent;
+border-left: 21px solid #0e51a0;
+-webkit-transform: rotate(142deg);
+-moz-transform: rotate(-4deg);
+rotation: 170deg;
+z-index: 4;
+}
+
+#red-lowcorner-bill {
+position: absolute;
+left: 301px;
+top: 342px;
+height: 0;
+border-top: 175px solid transparent;
+border-left: 18px solid #e2000e;
+-webkit-transform: rotate(52deg);
+-moz-transform: rotate(-4deg);
+rotation: 170;
+}
+
+
+#for-giggles     {
+    position: absolute;
+    left: 74px;
+    top: 200px;
+    width: 0;
+    height: 0;
+    border-right: 159px solid blue;
+    border-top: 16px solid green;
+    border-bottom: 77px solid purple;
+    border-left: 160px solid red;
+    z-index: 3;
+}
+
+#ref-bill {
+    display: block;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+/* Kelly, Purple, 2001 */
+
+
+#bck-kelly {
+    display: block;
+    margin-left: 11%;
+    height: 100%;
+    width: 78%;
+    background-color: #e0e0d8;
+    z-index: 1;
+}
+
+#first-kelly {
+    position: absolute;
+    left: 30%;
+    top: 15.4%;
+    width: 39.4%;
+    height: 40.4%;
+    background-color: #2f316a;
+    -webkit-transform: rotate(15deg);
+    -moz-transform: rotate(15deg);
+    rotation: 15deg;
+    z-index: 2;
+}
+
+#sec-kelly {
+    position: absolute;
+    left: 30%;
+    top: 44.2%;
+    width: 39.4%;
+    height: 40.4%;
+    background-color: #2f316a;
+    -webkit-transform: rotate(-15deg);
+    -moz-transform: rotate(-15deg);
+    rotation: -15deg;
+    z-index: 2;
+}
+
+#ref-kelly {
+    display: block;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+/* Malevitch, Rotes Quadrat, 2012 */
+
+#fnt-malevitch {
+}
+
+#bck-malevitch {
+    display: block;
+    margin-left: 0;
+    height: 100%;  
+    width: 100%;
+    background: rgb(242,233,216); /* Old browsers */
+    background: -moz-linear-gradient(-45deg, rgba(242,233,216,1) 0%, rgba(242,235,213,1) 21%, rgba(237,231,209,1) 37%, rgba(233,222,202,1) 63%, rgba(241,235,216,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(242,233,216,1)), color-stop(21%,rgba(242,235,213,1)), color-stop(37%,rgba(237,231,209,1)), color-stop(63%,rgba(233,222,202,1)), color-stop(100%,rgba(241,235,216,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(-45deg, rgba(242,233,216,1) 0%,rgba(242,235,213,1) 21%,rgba(237,231,209,1) 37%,rgba(233,222,202,1) 63%,rgba(241,235,216,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(-45deg, rgba(242,233,216,1) 0%,rgba(242,235,213,1) 21%,rgba(237,231,209,1) 37%,rgba(233,222,202,1) 63%,rgba(241,235,216,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(-45deg, rgba(242,233,216,1) 0%,rgba(242,235,213,1) 21%,rgba(237,231,209,1) 37%,rgba(233,222,202,1) 63%,rgba(241,235,216,1) 100%); /* IE10+ */
+    background: linear-gradient(135deg, rgba(242,233,216,1) 0%,rgba(242,235,213,1) 21%,rgba(237,231,209,1) 37%,rgba(233,222,202,1) 63%,rgba(241,235,216,1) 100%); /* W3C */
+    background-color: #ebe5d5;
+    z-index: 1;
+}
+
+#body-square-malevitch   {
+    position: absolute;
+    left: 73px;
+    top: 58px;
+    width: 360px;
+    height: 376px;
+
+    background: rgb(175,0,0); /* Old browsers */
+    background: -moz-linear-gradient(-45deg, rgba(175,0,0,1) 0%, rgba(186,0,1,1) 21%, rgba(176,0,0,1) 37%, rgba(187,2,0,1) 63%, rgba(183,2,1,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(175,0,0,1)), color-stop(21%,rgba(186,0,1,1)), color-stop(37%,rgba(176,0,0,1)), color-stop(63%,rgba(187,2,0,1)), color-stop(100%,rgba(183,2,1,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(-45deg, rgba(175,0,0,1) 0%,rgba(186,0,1,1) 21%,rgba(176,0,0,1) 37%,rgba(187,2,0,1) 63%,rgba(183,2,1,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(-45deg, rgba(175,0,0,1) 0%,rgba(186,0,1,1) 21%,rgba(176,0,0,1) 37%,rgba(187,2,0,1) 63%,rgba(183,2,1,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(-45deg, rgba(175,0,0,1) 0%,rgba(186,0,1,1) 21%,rgba(176,0,0,1) 37%,rgba(187,2,0,1) 63%,rgba(183,2,1,1) 100%); /* IE10+ */
+    background: linear-gradient(135deg, rgba(175,0,0,1) 0%,rgba(186,0,1,1) 21%,rgba(176,0,0,1) 37%,rgba(187,2,0,1) 63%,rgba(183,2,1,1) 100%); /* W3C */
+    background-color: #af0000;
+    z-index: 3;
+}
+
+#top-square-malevitch    {
+    position: absolute;
+    left: 74px;
+    top: 47px;
+    width: 0;
+    height: 0;
+    border-right: 359px solid #af0000;
+    border-top: 11px solid transparent;
+    z-index: 3;
+}
+
+
+#right-square-malevitch  {
+    position: absolute;
+    left: 433px;
+    top: 47px;
+    width: 0;
+    height: 0;
+    border-top: 324px solid #af0000;
+    border-right: 5px solid transparent;
+    z-index: 4;
+}
+
+#left-bottom-square-malevitch    {
+    position: absolute;
+    left: 73px;
+    top: 434px;
+    width: 0;
+    height: 3px;
+    border-right: 97px solid #af0000;
+    border-bottom: 1px solid transparent;
+    border-left: 0px solid #af0000;
+    z-index: 3;
+}
+
+#right-bottom-square-malevitch   {
+    position: absolute;
+    left: 170px;
+    top: 434px;
+    width: 165px;
+    height: 0;
+    border-top: 4px solid #af0000;
+    border-right: 99px solid transparent;
+    border-bottom: 77px solid transparent;
+    border-left: 0px solid transparent;
+    z-index: 3;
+}
+
+#left-square-malevitch   {
+    position: absolute;
+    left: 65px;
+    top: 57px;
+    width: 0px;
+    height: 0px;
+    border-top: 380px solid transparent;
+    border-right: 8px solid #af0000;
+    border-left: 0px solid transparent;
+}
+
+#for-giggles     {
+    position: absolute;
+    left: 74px;
+    top: 444px;
+    width: 0;
+    height: 0;
+    border-right: 159px solid blue;
+    border-top: 16px solid green;
+    border-bottom: 77px solid purple;
+    border-left: 160px solid red;
+    z-index: 3;
+}
+
+#ref-malevitch {
+    display: block;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+
+/* Next */
+
+
+#bck-next {
+    display: block;
+    height: 100%;  
+    width: 100%;
+    background: #e0e0d8;
+    z-index: 0;
+}
+
+#fnt-next {
+    position: absolute;
+    top: 403px;
+    left: 238px;
+    display: block;
+    z-index: 1;
+}
+
+
+#ref-next {
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+}
+
+
+
+/* Josef Albers, Homage to the Square: Blue, White, Grey, 1951 */
+
+/*#fnt-albers {
+}
+
+#bck-albers {
+    display: block;
+    margin-left: 12%;
+    height: 100%;  
+    width: 76%;
+    background: #e0e0d8;
+    z-index: 10;
+}
+
+#first-albers {
+    position: absolute;
+    left: 81px;
+    top: 77px;
+    width: 197px;
+    height: 202px;
+    background-color: #2d2f68;
+    -webkit-transform:rotate(-15deg);
+    -moz-transform:rotate(-15deg);
+    rotation:-15deg;
+    z-index: 11;
+}
+
+#sec-albers {
+    position: absolute;
+    left: 81px;
+    top: 221px;
+    width: 197px;
+    height: 202px;
+    background-color: #2d2f68;
+    -webkit-transform:rotate(15deg);
+    -moz-transform:rotate(15deg);
+    rotation:15deg;
+    z-index: 11;
+}
+
+#ref-albers {
+    display: block;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+*/
