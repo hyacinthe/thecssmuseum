@@ -1,9 +1,16 @@
 require.config({
   shim: {
+    'underscore' : { exports : '_' },
+    'backbone' : { deps : ['underscore'], exports : 'Backbone' },
+    'handlebars' : { exports : 'Handlebars' },
   },
 
   paths: {
-    jquery: 'vendor/jquery.min'
+    'jquery': 'vendor/jquery.min',
+    'underscore': 'vendor/underscore',
+    'backbone': 'vendor/backbone',
+    'handlebars': 'vendor/handlebars',
+    'text': 'vendor/text'
   }
 });
  
