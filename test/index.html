@@ -7,41 +7,30 @@
 </head>
 <body>
   <div id="mocha"></div>
+  
   <script src="lib/mocha/mocha.js"></script>
-  <script>mocha.setup('bdd')</script>
-
-  <!-- assertion framework -->
-  
   <script src="lib/chai.js"></script>
-    
-      
-  <script>expect = chai.expect</script>
-      
-    
+  <script src="lib/sinon.js"></script>
+  <script src="lib/sinon-chai.js"></script>
+  <script src="lib/json2.js"></script>
+
+  <script data-main="scripts/main" src="scripts/vendor/require.js"></script>
   
-
-  <!-- -->
-
-  <!-- include source files here... -->
-
-  <!-- include spec files here... -->
   <script>
-  // replace this by your own specs
-  (function() {
-    describe('Give it some context', function() {
-      describe('maybe a bit more context here', function() {
+    mocha.setup({ ui : "bdd", ignoreLeaks : true});
+    expect = chai.expect;
 
-        it('should run here few assertions', function() {
+    var specs = [
+      "../spec/models/gallery.spec"
+    ];
 
-        });
-
-      });
+    require(specs,function(){
+        setTimeout(function(){
+            require(["../runner/mocha"]);
+        },100);
     });
-  })();
-  </script>
 
-  <!-- trigger the mocha runner -->
-  <script src="runner/mocha.js"></script>
+  </script>
 
 </body>
 </html>
