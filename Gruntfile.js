@@ -68,7 +68,8 @@ module.exports = function( grunt ) {
           'app/*.html',
           'app/styles/**/*.css',
           'app/scripts/**/*.js',
-          'app/images/**/*'
+          'app/images/**/*',
+          'test/*'
         ],
         tasks: 'reload'
       }
@@ -184,6 +185,6 @@ module.exports = function( grunt ) {
   });
 
   // Alias the `test` task to run the `mocha` task instead
-  grunt.registerTask('test', 'server:phantom mocha');
+  grunt.registerTask('test', 'server:test');
 
 };
