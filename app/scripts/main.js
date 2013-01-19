@@ -3,6 +3,7 @@ require.config({
     'underscore' : { exports : '_' },
     'backbone' : { deps : ['underscore'], exports : 'Backbone' },
     'handlebars' : { exports : 'Handlebars' },
+    'json' : { exports : 'JSON' }
   },
 
   paths: {
@@ -10,7 +11,10 @@ require.config({
     'underscore': 'vendor/underscore',
     'backbone': 'vendor/backbone',
     'handlebars': 'vendor/handlebars',
-    'text': 'vendor/text'
+    'json': 'vendor/json2',
+    'text': 'vendor/text',
+    'models': 'models',
+    'data': '../data' 
   }
 });
  
