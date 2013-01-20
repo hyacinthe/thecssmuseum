@@ -2,6 +2,12 @@ define(["models/gallery"],function(Gallery){
 
     describe("Models : Gallery", function(){
 
+        describe("common sense", function(){
+            it("one equals one", function(){
+                expect(1).to.equal(1);
+            });
+        });
+
         describe("module", function(){
             it("can be imported", function(){
                 expect(Gallery).to.be.ok;
