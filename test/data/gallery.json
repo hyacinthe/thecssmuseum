@@ -1,5 +1,19 @@
 {
-    "base" : "templates",
+    "base" : "templates/gallery",
     "art" : [
-    ] 
+        {
+            "template" : "rotation-around-expanding-white/template.html",
+            "name" : "Rotation Around Expanding White",
+            "author" : "Max Bill",
+            "museum" : "",
+            "year" : 1981
+        },
+        {
+            "template" : "homage-to-the-square/template.html",
+            "name" : "Homage to the Square: Blue, White, Grey",
+            "author" : "Josef Albers",
+            "museum" : "",
+            "year" : 1951
+        }
+    ]
 }
