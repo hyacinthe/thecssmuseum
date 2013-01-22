@@ -3,3 +3,4 @@ workshop
 temp
 dist
 .DS_Store
+test/scripts
