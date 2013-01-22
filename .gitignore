@@ -4,3 +4,4 @@ temp
 dist
 .DS_Store
 test/scripts
+test/templates
