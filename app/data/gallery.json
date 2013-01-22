@@ -1,5 +1,5 @@
 {
-    "base" : "templates/gallery",
+    "base" : "templates/gallery/",
     "art" : [
         {
             "template" : "rotation-around-expanding-white/template.html",
