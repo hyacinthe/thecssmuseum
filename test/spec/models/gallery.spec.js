@@ -1,4 +1,4 @@
-define(["models/gallery","underscore"],function(Gallery,_){
+define(["models/gallery","underscore", "../mocks/paintings"],function(Gallery,_,paintingData){
 
     describe("Models : Gallery", function(){
 
@@ -54,50 +54,6 @@ define(["models/gallery","underscore"],function(Gallery,_){
             it("returns a list of Painting models", function(done){
 
                 $.when(Gallery.get()).done(function(paintings){
-
-                    // tests based on data/gallery.json
-
-                    var paintingData = [
-                        {
-                            "template" : "rotation-around-expanding-white/template.html",
-                            "name" : "Rotation Around Expanding White",
-                            "author" : "Max Bill",
-                            "museum" : "Annely Juda Fine Art",
-                            "city" : "London",
-                            "country" : "England",
-                            "year" : 1981
-                        },
-
-                        {
-                            "template" : "homage-to-the-square/template.html",
-                            "name" : "Homage to the Square: Blue, White, Grey",
-                            "author" : "Josef Albers",
-                            "museum" : "",
-                            "city" : "",
-                            "country" : "",
-                            "year" : 1951
-                        },
-
-                        {
-                            "template" : "purple/template.html",
-                            "name" : "Purple",
-                            "author" : "Ellsworth Kelly",
-                            "museum" : "National Gallery Of Art",
-                            "city" : "Washington D.C.",
-                            "country" : "U.S.A.",
-                            "year" : 2001
-                        },
-
-                        {
-                            "template" : "red-square/template.html",
-                            "name" : "Painterly Of A Pleasant Woman In Two Dimensions",
-                            "author" : "Kazimir Malevitch",
-                            "museum" : "State Russian Museum",
-                            "city" : "St. Petersburg",
-                            "country" : "Russia",
-                            "year" : 1915
-                        }
-                    ];
 
 
                     expect(paintings.length).to.equal(paintingData.length);
