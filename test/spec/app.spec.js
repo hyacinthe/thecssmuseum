@@ -3,6 +3,7 @@ define(["app","models/gallery", "models/painting", "./mocks/paintings", "undersc
     function(Application,Gallery,Painting,PaintingData,_,GalleryView){
 
         describe('Application', function () {
+
             describe('module', function () {
                 it('can be imported', function() {
                     expect(Application).to.be.ok;
@@ -14,10 +15,14 @@ define(["app","models/gallery", "models/painting", "./mocks/paintings", "undersc
             });
 
             describe('run', function(){
-                
+
                 afterEach(function(){
                     if(typeof Gallery.get.restore !== 'undefined'){
                         Gallery.get.restore();
+                    }
+
+                    if(typeof GalleryView.create.restore !== 'undefined'){
+                        GalleryView.create.restore();
                     }
                 });
 
@@ -30,7 +35,7 @@ define(["app","models/gallery", "models/painting", "./mocks/paintings", "undersc
                 });
 
                 it('passes loaded gallery data to gallery view through create', function(done){
-                    
+
                     sinon.stub(Gallery,'get', function(){
                         var paintings = [];
                         _.each(PaintingData, function(p){
@@ -40,11 +45,11 @@ define(["app","models/gallery", "models/painting", "./mocks/paintings", "undersc
                     });
 
                     sinon.stub(GalleryView,'create', function(paintings){
-                        
+
                         expect(paintings.length).to.equal(PaintingData.length);
-                        
+
                         _.each(paintings, function(p,i){
-                            expect(p.toJSON()).to.deep.equal(PaintingData[i])  
+                            expect(p.toJSON()).to.deep.equal(PaintingData[i])
                         });
 
                         done();
@@ -52,7 +57,7 @@ define(["app","models/gallery", "models/painting", "./mocks/paintings", "undersc
 
                     Application.run();
                 });
-            }); 
+            });
         });
 
     }
