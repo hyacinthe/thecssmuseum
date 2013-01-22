@@ -4,6 +4,8 @@ define(["underscore","backbone","models/painting"],function(_,Backbone,Painting)
 
     return {
 
+        Gallery : Gallery,
+
         create : function(paintings){
             if(typeof paintings === 'undefined'){
                 throw new Error("Paintings required");

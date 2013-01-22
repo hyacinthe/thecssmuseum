@@ -12,6 +12,10 @@ define(["views/gallery"],function(GalleryView){
                 expect(GalleryView).to.respondTo('create');
             });
 
+            it("exports Gallery", function(){
+                expect(GalleryView).to.respondTo('Gallery');
+            });
+
         });
 
         describe("create", function(){
