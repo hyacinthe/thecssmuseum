@@ -17,13 +17,13 @@
   <script data-main="scripts/main" src="scripts/vendor/require.js"></script>
 
   <script>
-    mocha.setup({ ui : "bdd", ignoreLeaks : true});
+    mocha.setup({ ui : "bdd", ignoreLeaks : true });
     expect = chai.expect;
 
     var specs = [
-      "../spec/models/gallery.spec",
-      "../spec/app.spec",
-      "../spec/views/gallery.spec"
+        "../spec/views/gallery.spec",
+        "../spec/models/gallery.spec",
+        "../spec/app.spec",
     ];
 
     require(specs,function(){

@@ -1,9 +1,17 @@
-define(["backbone"],function(Backbone){
+define(["underscore","backbone","models/painting"],function(_,Backbone,Painting){
 
-	var Gallery = Backbone.View.extend({});
+    var Gallery = Backbone.View.extend({});
 
-	return {
-		create : function(paintings){
-		}
-	};
+    return {
+
+        create : function(paintings){
+            if(typeof paintings === 'undefined'){
+                throw new Error("Paintings required");
+            }
+
+            return new Gallery({
+                models: _.map(paintings, function(p){ return new Painting(); })
+            });
+        }
+    };
 });
