@@ -1,4 +1,4 @@
-define(["views/gallery"],function(GalleryView){
+define(["underscore", "views/gallery","models/painting"],function(_,GalleryView,Painting){
 
     describe("Views : Gallery", function(){
 
@@ -18,8 +18,29 @@ define(["views/gallery"],function(GalleryView){
 
         });
 
+        describe("Gallery", function(){
+
+            it("requires models", function(){
+
+                var fn = function(){
+                    new GalleryView.Gallery();
+                };
+
+                expect(fn).to.throw("models required");
+            });
+
+            it("has a render method", function(){
+                expect(GalleryView.Gallery).to.respondTo("render");
+            });
+
+            // it("", function(){
+
+            // });
+
+        });
+
         describe("create", function(){
-            it("create requires a list of models", function(){
+            it("requires a list of models", function(){
 
                 var fn = function(){
                     GalleryView.create();
@@ -29,7 +50,7 @@ define(["views/gallery"],function(GalleryView){
 
             });
         });
-    
+
     });
 
 });
