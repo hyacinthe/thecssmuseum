@@ -1,5 +1,5 @@
 (function(window,document){
-    define(["jquery"], function($) {
+    define(["jquery","models/gallery", "views/gallery"], function($,Gallery,GalleryView) {
 
 
         function testing(){
@@ -9,14 +9,21 @@
         return {
             run : function(){
                 $(document).ready(function(){
-                    if(!testing()){
-                        $("#down > h3 > a").on("mouseover", function(){
-                            var marginset = $(".tableau").css("margin-right").replace(/[^-\d\.]/g, '');
-                            var posgall = $("#gallery").css("margin-left").replace(/[^-\d\.]/g, '');
-                            var n = posgall -500 - marginset;
-                            $("#gallery").css("margin-left", n);
-                        });
-                    }
+                    $.when(Gallery.get()).done(function(paintings){
+
+                        var galleryView = GalleryView.create(paintings);
+
+
+                        if(!testing()){
+                            $("#down > h3 > a").on("mouseover", function(){
+                                var marginset = $(".tableau").css("margin-right").replace(/[^-\d\.]/g, '');
+                                var posgall = $("#gallery").css("margin-left").replace(/[^-\d\.]/g, '');
+                                var n = posgall -500 - marginset;
+                                $("#gallery").css("margin-left", n);
+                            });
+                        }
+                    });
+
                 });
 
             }
