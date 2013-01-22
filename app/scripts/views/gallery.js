@@ -1,6 +1,6 @@
-define(["underscore","backbone","models/painting","handlebars","text!templates/gallery.html"],
+define(["underscore","backbone","models/painting","views/painting","handlebars","text!templates/gallery.html"],
 
-    function(_,Backbone,Painting,Handlebars,galleryTemplate){
+    function(_,Backbone,Painting,PaintingView,Handlebars,galleryTemplate){
 
         var Gallery = Backbone.View.extend({
 
@@ -15,6 +15,12 @@ define(["underscore","backbone","models/painting","handlebars","text!templates/g
                 if(typeof options.models === 'undefined'){
                     throw new Error("models required");
                 }
+
+                this.models = options.models;
+
+                _.each(this.models,function(m){
+                    PaintingView.create(m);
+                },this);    
             },
 
             next : function(){
@@ -41,7 +47,7 @@ define(["underscore","backbone","models/painting","handlebars","text!templates/g
                 }
 
                 return new Gallery({
-                    models: _.map(paintings, function(p){ return new Painting(); })
+                    models: paintings
                 });
             }
         };
