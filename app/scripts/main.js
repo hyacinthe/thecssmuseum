@@ -1,24 +1,38 @@
-require.config({
-  shim: {
-    'underscore' : { exports : '_' },
-    'backbone' : { deps : ['underscore'], exports : 'Backbone' },
-    'handlebars' : { exports : 'Handlebars' },
-    'json' : { exports : 'JSON' }
-  },
+(function(window,document){
 
-  paths: {
-    'jquery': 'vendor/jquery.min',
-    'underscore': 'vendor/underscore',
-    'backbone': 'vendor/backbone',
-    'handlebars': 'vendor/handlebars',
-    'json': 'vendor/json2',
-    'text': 'vendor/text',
-    'models': 'models',
-    'views' : 'views',
-    'data': '../data'
-  }
-});
+    require.config({
+      shim: {
+        'underscore' : { exports : '_' },
+        'backbone' : { deps : ['underscore'], exports : 'Backbone' },
+        'handlebars' : { exports : 'Handlebars' },
+        'json' : { exports : 'JSON' }
+      },
 
-require(['app'], function(App) {
-    App.run();
-});
+      paths: {
+        'jquery': 'vendor/jquery.min',
+        'underscore': 'vendor/underscore',
+        'backbone': 'vendor/backbone',
+        'handlebars': 'vendor/handlebars',
+        'json': 'vendor/json2',
+        'text': 'vendor/text',
+        'models': 'models',
+        'views' : 'views',
+        'data': '../data'
+      }
+    });
+
+    require(['jquery', 'app'], function($,App) {
+
+        function testing(){
+            return $("#mocha").length !== 0;
+        }
+
+        if(!testing()){
+            $(document).ready(function(){
+                App.run();
+            });
+        }
+
+    });
+
+})(window,document);
