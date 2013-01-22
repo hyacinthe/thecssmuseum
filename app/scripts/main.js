@@ -17,7 +17,8 @@
         'text': 'vendor/text',
         'models': 'models',
         'views' : 'views',
-        'data': '../data'
+        'data': '../data',
+        'templates' : '../templates'
       }
     });
 
