@@ -14,6 +14,7 @@ require.config({
     'json': 'vendor/json2',
     'text': 'vendor/text',
     'models': 'models',
+    'views' : 'views',
     'data': '../data'
   }
 });
