@@ -2,6 +2,9 @@ define(["jquery","underscore", "backbone", "handlebars"],function($,_,Backbone,H
 
     var Painting = Backbone.View.extend({
 
+        tagName : "li",
+        className : "tableau",
+
         initialize : function(options){
             if(typeof this.model === 'undefined'){
                 throw new Error("Model required");
