@@ -6,11 +6,22 @@ define(["underscore","backbone","models/painting","handlebars","text!templates/g
 
             template : Handlebars.compile(galleryTemplate),
 
+            events : {
+                "mouseover #down > h3 > a" : "next"
+            },
+
             initialize : function(options){
                 var options = options || {};
                 if(typeof options.models === 'undefined'){
                     throw new Error("models required");
                 }
+            },
+
+            next : function(){
+                var marginset = $(".tableau").css("margin-right").replace(/[^-\d\.]/g, '');
+                var posgall = $("#gallery").css("margin-left").replace(/[^-\d\.]/g, '');
+                var n = posgall -500 - marginset;
+                $("#gallery").css("margin-left", n);
             },
 
             render : function(){
